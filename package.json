@@ -1,0 +1,24 @@
+{
+  "name": "fluqx",
+  "version": "1.0.0",
+  "description": "An electronic funds management app",
+  "main": "server,js",
+  "scripts": {
+    "test": "jest server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamOdum/fluqx.git"
+  },
+  "keywords": [
+    "money",
+    "finance",
+    "thrift"
+  ],
+  "author": "Sam Odum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamOdum/fluqx/issues"
+  },
+  "homepage": "https://github.com/SamOdum/fluqx#readme"
+}
