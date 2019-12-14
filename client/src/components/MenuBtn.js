@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/MenuBtn.scss'
+// import '../styles/index.scss'
 
 function MenuBtn() {
 

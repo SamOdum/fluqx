@@ -1,0 +1,14 @@
+.brandedBtn {
+  background-color: $pri-brand-color;
+  color: $sec-text-color;
+  width: 100%;
+  padding: 2vh 4vw;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.plainLinkBtn {
+  color: $pri-brand-color;
+  width: 100%;
+  padding: 2vh 2vw 0vh;
+}
