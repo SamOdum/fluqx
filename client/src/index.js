@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
+import App from './pages/App';
 
 // import './fonts/open-sans-v17-latin-600.woff';
 // import './fonts/open-sans-v17-latin-600.woff2';

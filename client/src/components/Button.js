@@ -1,11 +1,11 @@
 import React from 'react';
-// import '../styles/index.scss';
+import { Link } from 'react-router-dom';
 
 function Button(props) {
     return (
-        <a href={props.href} className={props.className}>
-            {props.value}
-        </a>
+        <Link to={props.href} className={props.className}>
+            {props.name}
+        </Link>
     )
 }
 

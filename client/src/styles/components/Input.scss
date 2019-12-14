@@ -1,16 +1,15 @@
-.brandedBtn {
-  background-color: $pri-brand-color;
-  color: $sec-text-color;
+.brandedInput {
+  background-color: #fff;
+  color: $pri-text-color;
   width: 100%;
-  padding: 2vh 4vw;
+  padding: 2vh 1vw;
   border-radius: 3px;
-  text-decoration: none;
   font-size: calc(10px + 2vmin);
-  font-weight: 600;
+  font-weight: 400;
   display: inline-block;
 }
 
-.plainLinkBtn {
+.plainInput {
   color: $pri-brand-color;
   width: 100%;
   padding: 2vh 2vw 0vh;
