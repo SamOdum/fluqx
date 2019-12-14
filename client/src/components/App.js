@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Button from './components/Button';
-import logo from './img/fluqx-logo.png';
-import './styles/index.scss';
+import Button from './Button';
+import logo from '../img/fluqx-logo.png';
+import '../styles/index.scss';
 
 function App() {
   return (
