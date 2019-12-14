@@ -1,14 +1,19 @@
 import React from 'react';
-import '../styles/MenuBtn.scss'
+// import '../styles/index.scss'
 
 function MenuBtn() {
 
     return (
-        <div className='menu-btn'>
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
+        <div>
+            <div className='menu-btn'>
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+            </div>
+            <nav className="menu">
+            </nav>
         </div>
+        
     )
 }
 

@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import App from './pages/App';
+
+// import './fonts/open-sans-v17-latin-600.woff';
+// import './fonts/open-sans-v17-latin-600.woff2';
+// import './fonts/open-sans-v17-latin-regular.woff';
+// import './fonts/open-sans-v17-latin-regular.woff2';
+import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
