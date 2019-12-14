@@ -4,11 +4,21 @@ import '../styles/MenuBtn.scss'
 function MenuBtn() {
 
     return (
-        <div className='menu-btn'>
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
+        <div>
+            <div className='menu-btn'>
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+            </div>
+            <nav className="menu">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            </nav>
         </div>
+        
     )
 }
 
