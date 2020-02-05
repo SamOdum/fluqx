@@ -1,67 +1,71 @@
 .App {
-  text-align: center;
+	text-align: center;
 
-  &-logo {
-    height: 15vmin;
-    pointer-events: none;
-  }
+	&-logo {
+		height: 15vmin;
+		pointer-events: none;
+	}
 
-  &-header {
-    background-color: $pri-bg-color;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+	&-header {
+		background-color: $pri-bg-color;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: calc(10px + 2vmin);
+		color: white;
+	}
 
-  &-area {
-    height: 30vh;
-    width: 35vw;
-    // background-color: red;
+	&-area {
+		height: 30vh;
+		width: 35vw;
+		// background-color: red;
+		& div {
+			height: 61px;
+			width: 123.97;
+		}
 
-    &:first-of-type {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: calc(10px + 2vmin);
-    }
-    &:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: calc(8px + 2vmin);
-    }
-    &:last-of-type {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-end;
-      font-size: calc(8px + 2vmin);
-    }
-  }
-  @media (max-width: 400px) {
-    .App-area {
-      width: 55vw;
+		&:first-of-type {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: calc(10px + 2vmin);
+		}
+		&:nth-child(2) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: calc(8px + 2vmin);
+		}
+		&:last-of-type {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+			font-size: calc(8px + 2vmin);
+		}
+	}
+	@media (max-width: 400px) {
+		.App-area {
+			width: 58vw;
 
-      &:last-of-type {
-        align-items: center;
-      }
-    }
-  }
+			&:last-of-type {
+				align-items: center;
+			}
+		}
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 // @keyframes App-logo-spin {

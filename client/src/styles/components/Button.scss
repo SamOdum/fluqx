@@ -1,17 +1,24 @@
 .brandedBtn {
-  background-color: $pri-brand-color;
-  color: $sec-text-color;
-  width: 100%;
-  padding: 2vh 4vw;
-  border-radius: 3px;
-  text-decoration: none;
-  font-size: calc(10px + 2vmin);
-  font-weight: 600;
-  display: inline-block;
+	background-color: $pri-brand-color;
+	color: $sec-text-color;
+	width: 100%;
+	padding: 2vh 4vw;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: calc(10px + 2vmin);
+	font-weight: 600;
+	display: inline-block;
 }
 
 .plainLinkBtn {
-  color: $pri-brand-color;
-  width: 100%;
-  padding: 2vh 2vw 0vh;
+	color: $pri-brand-color;
+	font-size: 75%;
+	margin-top: 1%;
+	margin-bottom: 1.5%;
+	margin-left: auto;
+
+	@media screen and (min-width: 360px) {
+		margin-top: 3%;
+		margin-bottom: 4%;
+	}
 }

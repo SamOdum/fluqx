@@ -1,16 +1,18 @@
 .brandedInput {
-  background-color: #fff;
-  color: $pri-text-color;
-  width: 100%;
-  padding: 2vh 1vw;
-  border-radius: 3px;
-  font-size: calc(10px + 2vmin);
-  font-weight: 400;
-  display: inline-block;
+	background-color: #fff;
+	color: $pri-text-color;
+	width: 100%;
+	padding: 2vh 1vw;
+	border-radius: 2px;
+	font-size: calc(8px + 2vmin);
+	font-weight: 400;
+	padding-left: 8%;
+	display: inline-block;
+	border: 1px solid #2f80ed;
 }
 
 .plainInput {
-  color: $pri-brand-color;
-  width: 100%;
-  padding: 2vh 2vw 0vh;
+	color: $pri-brand-color;
+	width: 100%;
+	padding: 2vh 2vw 0vh;
 }
