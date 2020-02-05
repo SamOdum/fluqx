@@ -15,18 +15,20 @@ function Login() {
 		email: '',
 		password: '',
 		isSubmitting: false,
-		errorMessage: null,
+		errorMessage: 'null',
 	};
 
   const [data, setData] = useState(initialState);
   
-  	const handleInputChange = event => {
-		setData({
-			...data,
-			[event.target.name]: event.target.value,
-		});
-    };
-    
+  // Set up input handler
+  const handleInputChange = event => {
+  setData({
+    ...data,
+    [event.target.name]: event.target.value,
+  });
+  };
+  
+  // Set up form submission
   const handleFormSubmit = event => {
 		event.preventDefault();
 		setData({
@@ -34,7 +36,7 @@ function Login() {
 			isSubmitting: true,
 			errorMessage: null,
 		});
-		fetch('http://localhost:5000/api/v1/auth/login/', {
+		fetch({/* DROP LOGIN ENDPOINT HERE 'http://localhost:5000/api/v1/auth/login/' */}, {
 			//**Remember to implement .env here */
 			method: 'post',
 			headers: {
@@ -105,13 +107,16 @@ function Login() {
               />
             </Form>
           </div>
-          {<div className='App-area'>
-            {/*<Button
-              name='Create user'
-              href='#'
-              className='plainLinkBtn'
-            />*/}
-          </div>}
+          <div className='App-area' style={{color:'blue',}}>
+            {data.errorMessage ? (
+              <div>
+                <div>img</div>
+                <div>The email address or password you entered is incorrect. Please try again.</div>
+              </div>
+            ):(
+              <p>fkfnjamk</p>
+            ) }
+          </div>
         </div>
       </div>
 
