@@ -1,10 +1,10 @@
 import React from 'react'
 
 function FormInput(props) {
-    const { type, name, placeholder, className } = props;
+    const { type, name, placeholder, onChange, className, value } = props;
 
     return (
-        <input type={type} name={name} placeholder={placeholder} className={className}/>
+        <input type={type} name={name} placeholder={placeholder} onChange={onChange} value={value} className={className}/>
     )
 }
 
