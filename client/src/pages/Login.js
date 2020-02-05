@@ -6,6 +6,7 @@ import Input from '../components/FormInput';
 import Button from '../components/Button';
 import Logo from '../components/Logo';
 import ForgotPassword from './ForgotPassword';
+import failSymbol from '../img/svg/fail.svg';
 import { AuthContext } from './App';
 
 function Login() {
@@ -15,7 +16,7 @@ function Login() {
 		email: '',
 		password: '',
 		isSubmitting: false,
-		errorMessage: 'null',
+		errorMessage: null,
 	};
 
   const [data, setData] = useState(initialState);
@@ -107,15 +108,13 @@ function Login() {
               />
             </Form>
           </div>
-          <div className='App-area' style={{color:'blue',}}>
+          <div className='App-area' id='error-div' >
             {data.errorMessage ? (
               <div>
-                <div>img</div>
+                <div><img src={failSymbol} alt="fail symbol"/></div>
                 <div>The email address or password you entered is incorrect. Please try again.</div>
               </div>
-            ):(
-              <p>fkfnjamk</p>
-            ) }
+            ):('') }
           </div>
         </div>
       </div>
