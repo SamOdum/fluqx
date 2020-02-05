@@ -1,13 +1,71 @@
-import React, {Fragment} from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, {Fragment, useContext, useState} from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import Form from '../components/Form';
 import Input from '../components/FormInput';
 import Button from '../components/Button';
 import Logo from '../components/Logo';
 import ForgotPassword from './ForgotPassword';
+import { AuthContext } from './App';
 
 function Login() {
+  // Get Authorization context from App component
+	const { dispatch } = useContext(AuthContext);
+	const initialState = {
+		email: '',
+		password: '',
+		isSubmitting: false,
+		errorMessage: null,
+	};
+
+  const [data, setData] = useState(initialState);
+  
+  	const handleInputChange = event => {
+		setData({
+			...data,
+			[event.target.name]: event.target.value,
+		});
+    };
+    
+  const handleFormSubmit = event => {
+		event.preventDefault();
+		setData({
+			...data,
+			isSubmitting: true,
+			errorMessage: null,
+		});
+		fetch('http://localhost:5000/api/v1/auth/login/', {
+			//**Remember to implement .env here */
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				email: data.email,
+				password: data.password1,
+			}),
+		})
+			.then(res => {
+				if (res.ok) {
+					return res.json();
+				}
+				throw res;
+			})
+			.then(resJson => {
+				dispatch({
+					type: 'LOGIN',
+					payload: resJson,
+				});
+			})
+			.catch(error => {
+				setData({
+					...data,
+					isSubmitting: false,
+					errorMessage: error.status === 400? 'Fill all fields correctly' : error.message || error.statusText,
+				});
+			});
+	};
+
   return (
     <Fragment>
       <div className='App'>
@@ -18,9 +76,23 @@ function Login() {
             </div>           
           </div>
           <div className='App-area'>
-            <Form action='#' className='brandedForm'>
-              <Input type='email' name='email' placeholder='Email address' className='brandedInput'/>
-              <Input type='password' name='password' placeholder='Password' className='brandedInput'/>
+            <Form onSubmit={handleFormSubmit} className='brandedForm'>
+              <Input 
+                type='email' 
+                name='email' 
+                placeholder='Email address' 
+                onChange={handleInputChange}
+                value={data.email} 
+                className='brandedInput'
+              />
+              <Input 
+                type='password' 
+                name='password' 
+                placeholder='Password' 
+                onChange={handleInputChange} 
+                value={data.password}
+                className='brandedInput'
+              />
               <Button
                 name='Forgot password?'
                 href='/forgotpassword'
