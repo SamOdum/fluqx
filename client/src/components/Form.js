@@ -1,10 +1,10 @@
 import React from 'react'
 
 function Form(props) {
-    const { children, action, className } = props;
+    const { children, handleFormSubmit, className } = props;
 
     return (
-        <form action={action} className={className}>
+        <form onSubmit={handleFormSubmit} className={className}>
             {children}
         </form>
     )
